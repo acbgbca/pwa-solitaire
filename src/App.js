@@ -1,9 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
-import Board from './Board';
+import Board from './klondike/Board';
+import { useState } from 'react';
 
 function App() {
-  const cards = getShuffledDeck();
+  const [cards] = useState(getShuffledDeck());
 
   return (
     <Board cards={ cards }/>
@@ -15,7 +15,7 @@ function getShuffledDeck() {
   // Get all cards in the deck
   for (let suit in allCardSuits) {
     for (let rank in allCardRanks) {
-        cards.push({suit: allCardSuits[suit], rank: allCardRanks[rank]});
+        cards.push({suit: allCardSuits[suit], rank: allCardRanks[rank], facingUp: false});
     }
   }
 

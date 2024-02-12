@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.board {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.pileRow {
+  width: 100%;
+  display: flex;
+  padding: 2rem;
+  box-sizing: border-box;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.pile, .stash, .foundation, .waste, .spacer {
+  width: 14%;
+  flex-direction: column;
+  position: relative;
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+}
